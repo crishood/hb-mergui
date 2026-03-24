@@ -11,8 +11,8 @@
   --color-white: #fff8f4;
   --color-border: #e0cdbf;
 
-  --font-heading: 'Playfair Display', Georgia, serif;
-  --font-body: 'Lato', 'Helvetica Neue', sans-serif;
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Lato", "Helvetica Neue", sans-serif;
 
   --radius-sm: 8px;
   --radius-md: 16px;
@@ -28,7 +28,9 @@
 /* ============================================================
    Reset & Base
    ============================================================ */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -54,7 +56,9 @@ body {
 .app {
   opacity: 0;
   transform: translateY(12px);
-  transition: opacity var(--transition-slow), transform var(--transition-slow);
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow);
   pointer-events: none;
   max-width: 860px;
   margin: 0 auto;
@@ -91,7 +95,6 @@ body {
   font-weight: 300;
   color: var(--color-text-light);
   letter-spacing: 0.06em;
-  text-transform: uppercase;
 }
 
 .emoji {
@@ -115,7 +118,6 @@ body {
   font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: var(--color-text-light);
   margin-bottom: 1.5rem;
 }
@@ -149,7 +151,6 @@ body {
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
   color: var(--color-text-light);
   margin-top: 0.4rem;
 }
@@ -212,11 +213,22 @@ body {
 
 .year-nav {
   display: flex;
+  align-items: stretch;
   gap: 0.75rem;
   overflow-x: auto;
   padding-bottom: 0.75rem;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+}
+
+/* Vertical padding reserves layout space so hover translate + shadow stay inside the scrollport */
+.year-pill-wrap {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 0;
+  scroll-snap-align: start;
 }
 
 .year-nav::-webkit-scrollbar {
@@ -247,10 +259,12 @@ body {
   border-radius: var(--radius-pill);
   border: 1.5px solid var(--color-border);
   white-space: nowrap;
-  scroll-snap-align: start;
-  transition: background var(--transition-soft), color var(--transition-soft),
-              border-color var(--transition-soft), transform var(--transition-soft),
-              box-shadow var(--transition-soft);
+  transition:
+    background var(--transition-soft),
+    color var(--transition-soft),
+    border-color var(--transition-soft),
+    transform var(--transition-soft),
+    box-shadow var(--transition-soft);
   box-shadow: var(--shadow-card);
 }
 
@@ -259,8 +273,11 @@ body {
   background: var(--color-accent);
   color: var(--color-white);
   border-color: var(--color-accent);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-soft);
+  transform: translateY(-3px);
+  /* Softer, tighter shadow so it stays within wrap padding (avoids horizontal scroll bleed) */
+  box-shadow:
+    0 6px 18px rgba(139, 111, 94, 0.2),
+    0 2px 6px rgba(139, 111, 94, 0.08);
   outline: none;
 }
 
@@ -268,6 +285,41 @@ body {
   font-size: 0.9rem;
   color: var(--color-text-light);
   font-style: italic;
+}
+
+/* ============================================================
+   Site footer
+   ============================================================ */
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+  animation: fade-up 0.8s 0.45s ease both;
+}
+
+.site-footer__dedication {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+.site-footer__copy {
+  margin-top: 0.65rem;
+}
+
+.site-footer__copy small {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--color-text-light);
+  letter-spacing: 0.04em;
+}
+
+.site-footer__copy time {
+  font-weight: 400;
 }
 
 /* ============================================================
@@ -365,8 +417,10 @@ body {
   font-weight: 600;
   cursor: pointer;
   letter-spacing: 0.04em;
-  transition: background var(--transition-soft), transform var(--transition-soft),
-              box-shadow var(--transition-soft);
+  transition:
+    background var(--transition-soft),
+    transform var(--transition-soft),
+    box-shadow var(--transition-soft);
   box-shadow: var(--shadow-card);
 }
 
@@ -408,13 +462,23 @@ body {
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.04); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 @keyframes scale-in {

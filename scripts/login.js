@@ -1,6 +1,6 @@
 (() => {
   const STORED_KEY = "hb_auth";
-  const ENCODED_PW = "bWVyZ3VpcGF1bGFkYW5pZWxh";
+  const ENCODED_PW = "c25vb3B5";
 
   /** Checks if the entered password matches the stored one */
   const isCorrect = (input) => input === atob(ENCODED_PW);

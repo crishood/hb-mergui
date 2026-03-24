@@ -2,8 +2,12 @@
   const BIRTHDAY_MONTH = 3; // March (1-indexed)
   const BIRTHDAY_DAY = 26;
 
-  /** Returns true if today is March 26 */
+  /** Returns true when the ?dev=1 flag is present in the URL */
+  const isDevMode = () => new URLSearchParams(location.search).has('dev');
+
+  /** Returns true if today is March 26 (or dev mode is active) */
   const isBirthday = () => {
+    if (isDevMode()) return true;
     const now = new Date();
     return (
       now.getMonth() === BIRTHDAY_MONTH - 1 && now.getDate() === BIRTHDAY_DAY
