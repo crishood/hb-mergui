@@ -1,0 +1,110 @@
+{
+  "age": 33,
+  "title": "33 Reasons I Love You",
+  "subtitle": "A year full of light 🌸",
+  "message": "Mergui, watching you step into 33 has been the most beautiful thing. Every day with you is a gentle reminder of what matters. You carry warmth wherever you go — in your laughter, your patience, the way you look at the world. This little corner of the internet is yours. Happy birthday, my love. 🌷",
+  "song": {
+    "title": "La Vie en Rose",
+    "artist": "Édith Piaf",
+    "url": "https://open.spotify.com/track/4YzT7rPfQ10C4PdCd4dKVN"
+  },
+  "quote": "She is both hellfire and holy water, and the flavor you taste depends on how you treat her.",
+  "theme": {
+    "primaryColor": "#f5ede3",
+    "accentColor": "#c9a48e",
+    "font": "Playfair Display"
+  },
+  "highlights": [
+    {
+      "id": 1,
+      "type": "photo",
+      "src": "photos/01.jpg",
+      "caption": "That golden afternoon in the hills",
+      "date": "2025-07-14",
+      "location": "Tuscany, Italy",
+      "emoji": "🌻"
+    },
+    {
+      "id": 2,
+      "type": "photo",
+      "src": "photos/02.jpg",
+      "caption": "Dancing at midnight, just the two of us",
+      "date": "2025-12-31",
+      "location": "Home",
+      "emoji": "🌙"
+    },
+    {
+      "id": 3,
+      "type": "photo",
+      "src": "photos/03.jpg",
+      "caption": "The morning you made everything feel simple",
+      "date": "2025-04-03",
+      "location": "Paris, France",
+      "emoji": "☕"
+    },
+    {
+      "id": 4,
+      "type": "photo",
+      "src": "photos/04.jpg",
+      "caption": "Watching the sea with you",
+      "date": "2025-08-22",
+      "location": "Santorini, Greece",
+      "emoji": "🌊"
+    },
+    {
+      "id": 5,
+      "type": "photo",
+      "src": "photos/05.jpg",
+      "caption": "First snow walk of the year",
+      "date": "2026-01-08",
+      "location": "Montreal, Canada",
+      "emoji": "❄️"
+    },
+    {
+      "id": 6,
+      "type": "photo",
+      "src": "photos/06.jpg",
+      "caption": "The flower market on a slow Sunday",
+      "date": "2025-05-18",
+      "location": "Amsterdam, Netherlands",
+      "emoji": "🌷"
+    }
+  ],
+  "memories": [
+    {
+      "id": 1,
+      "title": "The long phone call",
+      "description": "We talked until 3am about absolutely nothing and everything. I remember not wanting to hang up.",
+      "emoji": "📞",
+      "date": "2025-06-11"
+    },
+    {
+      "id": 2,
+      "title": "Cooking disaster",
+      "description": "The pasta burned, the smoke alarm went off, and we ended up eating cereal at 11pm laughing so hard.",
+      "emoji": "🍝",
+      "date": "2025-09-04"
+    },
+    {
+      "id": 3,
+      "title": "That one sunset",
+      "description": "Neither of us said a word for ten minutes. We didn't need to.",
+      "emoji": "🌅",
+      "date": "2025-10-15"
+    },
+    {
+      "id": 4,
+      "title": "The surprise",
+      "description": "You knew. You somehow always know. But you pretended to be surprised anyway, just for me.",
+      "emoji": "🎁",
+      "date": "2025-03-26"
+    }
+  ],
+  "wishes": [
+    "May every door that opens for you lead somewhere beautiful",
+    "May your laughter be loud and your burdens light",
+    "May this year bring you every color of joy you deserve",
+    "May you always feel as loved as you are",
+    "May 33 be the chapter where everything clicks into place 🌸"
+  ]
+}

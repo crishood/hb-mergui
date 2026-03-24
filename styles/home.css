@@ -1,0 +1,458 @@
+/* ============================================================
+   CSS Custom Properties
+   ============================================================ */
+:root {
+  --color-bg: #f9f3ec;
+  --color-card: #f0e4d4;
+  --color-accent: #c9a48e;
+  --color-text: #8b6f5e;
+  --color-text-light: #b89080;
+  --color-hover: #e8c9bb;
+  --color-white: #fff8f4;
+  --color-border: #e0cdbf;
+
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Lato', 'Helvetica Neue', sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-pill: 100px;
+
+  --shadow-soft: 0 4px 20px rgba(139, 111, 94, 0.12);
+  --shadow-card: 0 2px 12px rgba(139, 111, 94, 0.08);
+
+  --transition-soft: 200ms ease;
+  --transition-slow: 600ms ease;
+}
+
+/* ============================================================
+   Reset & Base
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   App Shell
+   ============================================================ */
+.app {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+  pointer-events: none;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+.app--visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* ============================================================
+   Header
+   ============================================================ */
+.site-header {
+  text-align: center;
+  padding: 3rem 0 2rem;
+  animation: fade-up 0.8s ease both;
+}
+
+.site-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+.site-subtitle {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--color-text-light);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.emoji {
+  display: inline-block;
+}
+
+/* ============================================================
+   Countdown Section
+   ============================================================ */
+.countdown-section {
+  background: var(--color-card);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 2rem;
+  margin: 2rem 0;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  animation: fade-up 0.8s 0.15s ease both;
+}
+
+.countdown-label {
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+}
+
+.countdown-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 72px;
+}
+
+.countdown-num {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 8vw, 4rem);
+  font-weight: 600;
+  color: var(--color-accent);
+  line-height: 1;
+  animation: pulse 2s ease-in-out infinite;
+  display: block;
+}
+
+.countdown-text {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  margin-top: 0.4rem;
+}
+
+.countdown-separator {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-weight: 300;
+  color: var(--color-border);
+  line-height: 1;
+  padding-top: 0.1em;
+  align-self: flex-start;
+}
+
+/* Birthday Banner */
+.birthday-banner {
+  animation: float 3s ease-in-out infinite;
+}
+
+.birthday-emoji {
+  font-size: 1.8rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.75rem;
+}
+
+.birthday-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.birthday-subheading {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--color-text-light);
+}
+
+.birthday-banner-active {
+  background: linear-gradient(135deg, var(--color-card), var(--color-hover));
+}
+
+/* ============================================================
+   Nav Section
+   ============================================================ */
+.nav-section {
+  margin-top: 2.5rem;
+  animation: fade-up 0.8s 0.3s ease both;
+}
+
+.nav-title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.year-nav {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.year-nav::-webkit-scrollbar {
+  height: 4px;
+}
+
+.year-nav::-webkit-scrollbar-track {
+  background: var(--color-card);
+  border-radius: 2px;
+}
+
+.year-nav::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+.year-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.4rem;
+  background: var(--color-card);
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--color-border);
+  white-space: nowrap;
+  scroll-snap-align: start;
+  transition: background var(--transition-soft), color var(--transition-soft),
+              border-color var(--transition-soft), transform var(--transition-soft),
+              box-shadow var(--transition-soft);
+  box-shadow: var(--shadow-card);
+}
+
+.year-pill:hover,
+.year-pill:focus-visible {
+  background: var(--color-accent);
+  color: var(--color-white);
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+  outline: none;
+}
+
+.nav-empty {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+/* ============================================================
+   Login Overlay
+   ============================================================ */
+.login-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1.5rem;
+  transition: opacity 0.5s ease;
+}
+
+.login-overlay--exit {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.login-card {
+  background: var(--color-card);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 2rem;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  animation: scale-in 0.4s ease both;
+}
+
+.login-title {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.4rem;
+}
+
+.login-subtitle {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--color-text-light);
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.03em;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--color-bg);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text);
+  outline: none;
+  transition: border-color var(--transition-soft);
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.login-input:focus {
+  border-color: var(--color-accent);
+}
+
+.login-input::placeholder {
+  color: var(--color-text-light);
+  letter-spacing: 0.05em;
+}
+
+.login-error {
+  font-size: 0.82rem;
+  color: #c97a7a;
+  min-height: 1.2em;
+  font-style: italic;
+}
+
+.login-btn {
+  padding: 0.75rem 1.5rem;
+  background: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: background var(--transition-soft), transform var(--transition-soft),
+              box-shadow var(--transition-soft);
+  box-shadow: var(--shadow-card);
+}
+
+.login-btn:hover {
+  background: #b8937e;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+.login-btn:active {
+  transform: translateY(0);
+}
+
+/* ============================================================
+   Confetti Canvas
+   ============================================================ */
+.confetti-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100;
+  display: none;
+}
+
+/* ============================================================
+   Animations
+   ============================================================ */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 480px) {
+  .app {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .site-header {
+    padding: 2rem 0 1.5rem;
+  }
+
+  .countdown-section {
+    padding: 2rem 1rem;
+  }
+
+  .countdown-unit {
+    min-width: 60px;
+  }
+
+  .countdown-grid {
+    gap: 0.1rem;
+  }
+
+  .login-card {
+    padding: 2rem 1.25rem;
+  }
+}

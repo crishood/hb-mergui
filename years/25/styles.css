@@ -1,0 +1,459 @@
+/* ============================================================
+   Year 25 — Light, Warm, Hopeful
+   ============================================================ */
+:root {
+  --color-bg: #fef9f0;
+  --color-card: #fff8ed;
+  --color-accent: #e8a840;
+  --color-text: #6b5030;
+  --color-text-light: #a07850;
+  --color-border: #f0ddb8;
+  --color-hover: #fdebc8;
+  --color-white: #fffef8;
+
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Lato', 'Helvetica Neue', sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-pill: 100px;
+
+  --shadow-soft: 0 4px 24px rgba(107, 80, 48, 0.1);
+  --shadow-card: 0 2px 12px rgba(107, 80, 48, 0.07);
+}
+
+/* ============================================================
+   Reset & Base
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   Back Button
+   ============================================================ */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.2rem;
+  margin: 1.5rem 1.5rem 0;
+  background: var(--color-card);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--color-border);
+  transition: background 200ms ease, color 200ms ease, border-color 200ms ease,
+              transform 200ms ease;
+  box-shadow: var(--shadow-card);
+}
+
+.back-btn:hover {
+  background: var(--color-accent);
+  color: var(--color-white);
+  border-color: var(--color-accent);
+  transform: translateX(-2px);
+}
+
+/* ============================================================
+   Page Container
+   ============================================================ */
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 5rem;
+}
+
+/* ============================================================
+   Loading Spinner
+   ============================================================ */
+.loading {
+  text-align: center;
+  padding: 5rem;
+  font-size: 2.5rem;
+  animation: spin 2s linear infinite;
+  display: inline-block;
+  width: 100%;
+}
+
+/* ============================================================
+   Page Header
+   ============================================================ */
+.page-header {
+  text-align: center;
+  padding: 2.5rem 0 2rem;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 2.5rem;
+  animation: fade-up 0.7s ease both;
+}
+
+.page-age {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.page-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+/* ============================================================
+   Section Title
+   ============================================================ */
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 1.25rem;
+}
+
+/* ============================================================
+   Message Card
+   ============================================================ */
+.section-message {
+  margin-bottom: 2.5rem;
+  animation: fade-up 0.7s 0.1s ease both;
+}
+
+.message-card {
+  background: var(--color-card);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  border-left: 3px solid var(--color-accent);
+  box-shadow: var(--shadow-card);
+}
+
+.message-text {
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--color-text);
+  font-style: italic;
+}
+
+/* ============================================================
+   Song Callout
+   ============================================================ */
+.section-song {
+  margin-bottom: 2.5rem;
+  animation: fade-up 0.7s 0.15s ease both;
+}
+
+.song-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--color-card);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border);
+}
+
+.song-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.song-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.song-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.song-artist {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  font-weight: 300;
+}
+
+.song-link {
+  color: var(--color-accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: color 200ms ease;
+}
+
+.song-link:hover {
+  color: var(--color-text);
+}
+
+/* ============================================================
+   Quote Block
+   ============================================================ */
+.quote-block {
+  margin: 2.5rem 0;
+  padding: 2rem 2.5rem;
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  animation: fade-up 0.7s 0.2s ease both;
+}
+
+.quote-text {
+  font-family: var(--font-heading);
+  font-size: clamp(1.05rem, 3vw, 1.35rem);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   Highlights Grid
+   ============================================================ */
+.section-highlights {
+  margin-bottom: 3rem;
+  animation: fade-up 0.7s 0.25s ease both;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.highlight-card {
+  background: var(--color-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-soft);
+}
+
+.highlight-img-wrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--color-border);
+  overflow: hidden;
+}
+
+.highlight-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.highlight-emoji {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.75rem;
+  font-size: 1.4rem;
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.15));
+}
+
+.highlight-body {
+  padding: 0.875rem 1rem 1rem;
+}
+
+.highlight-caption {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.3rem;
+  line-height: 1.35;
+}
+
+.highlight-meta {
+  font-size: 0.78rem;
+  color: var(--color-text-light);
+  font-weight: 300;
+  margin-top: 0.15rem;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   Memories List
+   ============================================================ */
+.section-memories {
+  margin-bottom: 3rem;
+  animation: fade-up 0.7s 0.3s ease both;
+}
+
+.memories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.memory-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: var(--color-card);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border);
+  transition: transform 200ms ease;
+}
+
+.memory-card:hover {
+  transform: translateX(4px);
+}
+
+.memory-emoji {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.memory-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.memory-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.3rem;
+}
+
+.memory-desc {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--color-text-light);
+  line-height: 1.65;
+}
+
+.memory-date {
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  font-weight: 400;
+  margin-top: 0.4rem;
+  letter-spacing: 0.03em;
+}
+
+/* ============================================================
+   Wishes List
+   ============================================================ */
+.section-wishes {
+  animation: fade-up 0.7s 0.35s ease both;
+}
+
+.wishes-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.wish-item {
+  padding: 1rem 1.25rem;
+  background: var(--color-card);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--color-text);
+  border-left: 3px solid var(--color-accent);
+  box-shadow: var(--shadow-card);
+  line-height: 1.55;
+  transition: background 200ms ease, transform 200ms ease;
+}
+
+.wish-item:hover {
+  background: var(--color-hover);
+  transform: translateX(4px);
+}
+
+/* ============================================================
+   Error State
+   ============================================================ */
+.error-msg {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--color-text-light);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+/* ============================================================
+   Animations
+   ============================================================ */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 540px) {
+  .page {
+    padding: 1.5rem 1rem 4rem;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .back-btn {
+    margin: 1rem 1rem 0;
+  }
+
+  .song-card {
+    flex-wrap: wrap;
+  }
+
+  .quote-block {
+    padding: 1.5rem 1rem;
+  }
+}
