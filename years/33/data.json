@@ -2,7 +2,7 @@
   "age": 33,
   "title": "El primer 26 de marzo",
   "subtitle": "Alguien con quien tomar vino 🍷",
-  "message": "Querida Mergui: ♥️🌷\n\nEste es el primer cumpleaños que comparto a tu lado. Quiero agradecerle a Dios por tu vida y a todos los santos —en especial a María Auxiliadora y San José— por su cariñosa intercesión, que me permitió apreciar tu magnífica personalidad.\n\nTe quiero, te admiro y deseo lo mejor para ti. Espero que en este nuevo año de vida crezcas en fe e intelecto, que el Espíritu Santo guíe tu andar y que sigas imprimiendo belleza en cada cosa, grande o pequeña, que haces.\n\nLe pido a Dios todos los días que guarde tu aniñado sentido del humor, tu risa de ardillita y tu excelencia inspiradora; a donde llegas, iluminas, y cada año que nos acompañes siempre será un año más lindo. Gracias por haber llegado a mi vida a compartir vino, oraciones, conversaciones y fotografías bellas.\n\nDios te bendiga, preciosa, y que nuestra reina celestial, la querida María, siga intercediendo para que sigas siendo una mujer encantadora y ejemplar. Te quiero con mi cuerpo, con mi alma y con mi mente.",
+  "message": "Querida Mergui: ♥️🌷\n\nEste es el primer cumpleaños que comparto a tu lado. Quiero agradecerle a Dios por tu vida y a todos los santos —en especial a María Auxiliadora y San José— por su cariñosa intercesión, que me permitió apreciar tu magnífica personalidad.\n\nTe quiero, te admiro y deseo lo mejor para ti. Espero que en este nuevo año de vida crezcas en fe e intelecto, que el Espíritu Santo guíe tu andar y que sigas imprimiendo belleza en cada cosa, grande o pequeña, que haces.\n\nLe pido a Dios todos los días que guarde tu aniñado sentido del humor, tu risa de ardillita y tu excelencia inspiradora; a donde llegas, iluminas, y cada año que nos acompañes siempre será un año más lindo. Gracias por haber llegado a mi vida a compartir vino, oraciones, conversaciones y fotografías bellas.\n\nDios te bendiga, preciosa, y que nuestra reina celestial, la querida María, siga intercediendo para que sigas siendo una mujer encantadora y ejemplar. Te quiero con mi cuerpo, con mi alma y con mi mente.\n\n Con amor,\n\nCristhian",
   "song": {
     "title": "Hurí",
     "artist": "Silva y Villalba",
@@ -17,94 +17,46 @@
   "highlights": [
     {
       "id": 1,
-      "type": "photo",
-      "src": "photos/01.jpg",
-      "caption": "That golden afternoon in the hills",
-      "date": "2025-07-14",
-      "location": "Tuscany, Italy",
-      "emoji": "🌻"
+      "type": "",
+      "src": "pics/01.jpeg",
+      "caption": "",
+      "date": "",
+      "location": "Envigado, Antioquia",
+      "emoji": "🍔"
     },
     {
       "id": 2,
-      "type": "photo",
-      "src": "photos/02.jpg",
-      "caption": "Dancing at midnight, just the two of us",
-      "date": "2025-12-31",
-      "location": "Home",
-      "emoji": "🌙"
+      "type": "",
+      "src": "pics/03.jpeg",
+      "caption": "",
+      "date": "",
+      "location": "Olaya, Antioquia",
+      "emoji": "🍷"
     },
     {
       "id": 3,
-      "type": "photo",
-      "src": "photos/03.jpg",
-      "caption": "The morning you made everything feel simple",
-      "date": "2025-04-03",
-      "location": "Paris, France",
-      "emoji": "☕"
-    },
-    {
-      "id": 4,
-      "type": "photo",
-      "src": "photos/04.jpg",
-      "caption": "Watching the sea with you",
-      "date": "2025-08-22",
-      "location": "Santorini, Greece",
-      "emoji": "🌊"
-    },
-    {
-      "id": 5,
-      "type": "photo",
-      "src": "photos/05.jpg",
-      "caption": "First snow walk of the year",
-      "date": "2026-01-08",
-      "location": "Montreal, Canada",
-      "emoji": "❄️"
-    },
-    {
-      "id": 6,
-      "type": "photo",
-      "src": "photos/06.jpg",
-      "caption": "The flower market on a slow Sunday",
-      "date": "2025-05-18",
-      "location": "Amsterdam, Netherlands",
-      "emoji": "🌷"
+      "type": "",
+      "src": "pics/02.jpeg",
+      "caption": "",
+      "date": "",
+      "location": "Envigado, Antioquia",
+      "emoji": "🍻"
     }
   ],
   "memories": [
     {
       "id": 1,
-      "title": "The long phone call",
-      "description": "We talked until 3am about absolutely nothing and everything. I remember not wanting to hang up.",
-      "emoji": "📞",
-      "date": "2025-06-11"
-    },
-    {
-      "id": 2,
-      "title": "Cooking disaster",
-      "description": "The pasta burned, the smoke alarm went off, and we ended up eating cereal at 11pm laughing so hard.",
-      "emoji": "🍝",
-      "date": "2025-09-04"
-    },
-    {
-      "id": 3,
-      "title": "That one sunset",
-      "description": "Neither of us said a word for ten minutes. We didn't need to.",
-      "emoji": "🌅",
-      "date": "2025-10-15"
-    },
-    {
-      "id": 4,
-      "title": "The surprise",
-      "description": "You knew. You somehow always know. But you pretended to be surprised anyway, just for me.",
-      "emoji": "🎁",
-      "date": "2025-03-26"
+      "title": "",
+      "description": "",
+      "emoji": "",
+      "date": ""
     }
   ],
   "wishes": [
-    "May every door that opens for you lead somewhere beautiful",
-    "May your laughter be loud and your burdens light",
-    "May this year bring you every color of joy you deserve",
-    "May you always feel as loved as you are",
-    "May 33 be the chapter where everything clicks into place 🌸"
+    "Que el Espíritu Santo te inspire siempre las mejores ideas",
+    "Que en tu corazón crezca la fe y la esperanza",
+    "Que sigas siendo una hija y hermana incondicional",
+    "Que tu vida siga siendo un reflejo de la belleza y gracia del Señor",
+    "Que sigas haciendo arquitectura con sentido"
   ]
 }
